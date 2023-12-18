@@ -1,38 +1,163 @@
+@import '~antd/dist/reset.css';
+
+html {
+  box-sizing: border-box;
+  outline: none;
+  overflow: auto;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+.flex_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list_heading {
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px 0;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.header {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 25px 0;
+  background-color: #208AEC;
 }
 
-.App-link {
-  color: #61dafb;
+.header_logo {
+  height: 55px;
+  margin-bottom: 20px;
+  object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header_text_bold {
+  margin-bottom: 3px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header_text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+.heading {
+  font-size: 22px;
+}
+
+.form_wrapper {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form_input {
+  margin-bottom: 20px;
+}
+
+.form_button {
+  width: 100%;
+}
+
+.messages {
+  margin-top: 25px;
+}
+
+.message_sent {
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+}
+
+.message_received {
+  position: relative;
+  width: 50%;
+}
+
+.message_bubble {
+  padding: 12px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.message_sent .message_bubble {
+  background-color: #1E88E5;
+  color: #fff;
+}
+
+.message_time {
+  position: absolute;
+  top: 35%;
+  left: -62px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.35);
+  transform: translateY(-50%);
+}
+
+.message_sent .message_time {
+  left: initial;
+  right: -62px;
+}
+
+.message_name {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.message_sent .message_name {
+  text-align: right;
+}
+
+.new_message {
+  padding-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.new_message_title {
+  margin-bottom: 15px;
 }
